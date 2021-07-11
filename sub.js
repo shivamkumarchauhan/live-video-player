@@ -14,9 +14,9 @@ if (Hls.isSupported()) {
 	function setSub(){
 		var checkedElement = document.getElementById('eng_sub');
 		if(checkedElement.checked){
-			hls.subtitleTrack = 0;
-		}else{
 			hls.subtitleTrack = 1;
+		}else{
+			hls.subtitleTrack = 0;
 		}
 	}
   

@@ -2,9 +2,7 @@ if (Hls.isSupported()) {
 	var video = document.getElementById('video');
 	var hls = new Hls();
 	hls.attachMedia(video);
-	hls.loadSource('https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(amazon)/index.m3u8');
-	//hls.loadSource('https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(roku)/index.m3u8');
-	//hls.loadSource('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8');
+	hls.loadSource('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8');
 	hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
 		console.log(
 		  'manifest loaded, found ' + data.levels.length + ' quality level'

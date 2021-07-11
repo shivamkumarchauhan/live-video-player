@@ -2,7 +2,9 @@ if (Hls.isSupported()) {
 	var video = document.getElementById('video');
 	var hls = new Hls();
 	hls.attachMedia(video);
-	hls.loadSource('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8');
+	// You can use any live URL. This is a dummy url.
+	var url = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
+	hls.loadSource(url);
 	hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
 		for(var i=0; i<data.subtitleTracks.length; i++){
 			console.log(data.subtitleTracks[i]);
